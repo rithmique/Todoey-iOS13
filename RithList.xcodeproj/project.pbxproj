@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5AC1E6726258D6400A49788 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5AC1E6526258D6400A49788 /* DataModel.xcdatamodeld */; };
 		EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4F9239524DB00FB933B /* AppDelegate.swift */; };
 		EB2BE4FE239524DB00FB933B /* RithListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4FD239524DB00FB933B /* RithListViewController.swift */; };
 		EB2BE501239524DB00FB933B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2BE4FF239524DB00FB933B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5AC1E6626258D6400A49788 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EB2BE4F6239524DB00FB933B /* RithList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RithList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2BE4F9239524DB00FB933B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB2BE4FD239524DB00FB933B /* RithListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RithListViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5E7FB7A2624404200D4DDD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB2BE4FF239524DB00FB933B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5E7FB7C262440F400D4DDD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC1E6526258D6400A49788 /* DataModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5E7FB7D2624410100D4DDD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB2BE4FD239524DB00FB933B /* RithListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		EB2BE4ED239524DB00FB933B = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				EB2BE4F9239524DB00FB933B /* AppDelegate.swift */,
-				EB2BE4FD239524DB00FB933B /* RithListViewController.swift */,
-				EB2BE4FF239524DB00FB933B /* Main.storyboard */,
+				B5E7FB7C262440F400D4DDD5 /* Model */,
+				B5E7FB7A2624404200D4DDD5 /* View */,
+				B5E7FB7D2624410100D4DDD5 /* Controller */,
 				EB2BE502239524DC00FB933B /* Assets.xcassets */,
 				EB2BE504239524DC00FB933B /* LaunchScreen.storyboard */,
 				EB2BE507239524DC00FB933B /* Info.plist */,
@@ -136,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2BE4FE239524DB00FB933B /* RithListViewController.swift in Sources */,
+				B5AC1E6726258D6400A49788 /* DataModel.xcdatamodeld in Sources */,
 				EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +366,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B5AC1E6526258D6400A49788 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5AC1E6626258D6400A49788 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = B5AC1E6626258D6400A49788 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EB2BE4EE239524DB00FB933B /* Project object */;
 }
