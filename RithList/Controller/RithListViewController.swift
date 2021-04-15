@@ -4,7 +4,7 @@ import CoreData
 
 class RithListViewController: UITableViewController {
     
-    var itemArray = [RithItem]()
+    var itemArray = [perentCategory]()
     
     //.userDomainMask - users home directory,
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("RithListItems.plist")
@@ -92,13 +92,15 @@ class RithListViewController: UITableViewController {
     }
     
     //    //MARK: - load items from users home directory ( from dataFilePath )
-    func loadItems(for request: NSFetchRequest<RithItem> = RithItem.fetchRequest()) {
+    func loadItems(with request: NSFetchRequest<RithItem> = RithItem.fetchRequest()) {
         
         do {
             itemArray = try context.fetch(request)
         } catch {
             print("Unexpected error with load items. \n \(error)")
         }
+        
+        tableView.reloadData()
     }
 }
 
@@ -116,8 +118,24 @@ extension RithListViewController: UISearchBarDelegate {
         
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
 
-        loadItems(for: request)
+        do {
+            itemArray = try context.fetch(request)
+        } catch {
+            print("Unexpected error with load items. \n \(error)")
+        }
+        
+        tableView.reloadData()
     }
-    
 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text?.count == 0 {
+            loadItems()
+            
+            DispatchQueue.main.async {
+                
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
 }
