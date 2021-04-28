@@ -4,7 +4,7 @@ import CoreData
 
 class RithListViewController: UITableViewController {
     
-    var itemArray = [perentCategory]()
+    var itemArray = [RithItem]()
     
     //.userDomainMask - users home directory,
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("RithListItems.plist")
